@@ -18,7 +18,7 @@ export abstract class Account {
    
    withdraw = (saque:number): void =>{
 
-      if(saque<=this.getBalance()){
+      if(saque<=this.getBalance()&&this.ValidateStatus()){
          console.log("Você sacou " + saque)
          this.setBalance(this.balance-saque)
       }else{
